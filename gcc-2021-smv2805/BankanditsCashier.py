@@ -1,0 +1,30 @@
+n=int(input())
+if(n==0):
+    print(0)
+elif(n==1 or n==2):
+    print(1)
+else:
+    count1=0
+    count2=0
+    minum=99999999
+    if(n%2==0):
+        count2=n//2
+        while(True):
+            if(minum>abs(count2-count1)):
+                minum=count2-count1
+                count2-=1
+                count1+=2
+            if(minum<abs(count2-count1)):
+                break
+        print(count2+count1-1)
+    else:
+        count1=1
+        count2=n//2
+        while(True):
+            if(minum>abs(count2-count1)):
+                minum=count2-count1
+                count2-=1
+                count1+=2
+            if(minum<abs(count2-count1)):
+                break
+        print(count2+count1-1)
